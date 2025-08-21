@@ -24,6 +24,6 @@ fetch('https://restcountries.com/v3.1/all?fields=name,capital,region,population,
 
 
     darkMode.addEventListener('click', () => {
-        body.classList.add('dark-mode');
+        body.classList.toggle('dark-mode');
     })
 
