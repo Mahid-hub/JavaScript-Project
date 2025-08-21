@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode {
+    background-color: #161515dc;
+    color: white;
+}
+
+.title {
+    font-weight: 800;
+}
+
+.switcher-btn {
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.back-btn {
+    height: 30px;
+    width: 100px;
+    /* position: fixed;
+    top: 105px;
+    left: 25px; */
+    border: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+main {
+    margin-left: 32px;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.back-btn:hover {
+    background-color: whitesmoke;
+}
+
+.country-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 32px;
+}
+
+.country-img {
+    width: 45%;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.country-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    column-gap: 32px;
+    max-height: 180px;
+    flex-wrap: wrap;
+}
+
+.country-text p {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+.border-country {
+    margin-top: 64px;
+}
+
+.border-country a {
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0px 0px 1px 0.5px rgba(0, 0, 0, 0.1);
+    padding: 3px;
+    border-radius: 2px;
+}
+
+@media (max-width:1000px) {
+    .country-details {
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .country-text {
+        display: block;
+        max-height: unset;
+    }
+
+    .country-text p {
+        margin-top: 16px;
+    }
+
+    main {
+        margin-left: 0px;
+        padding-left: 10px;
+    }
+
+    .border-country {
+        margin-top: 48px;
+    }
+}
+
+@media (max-width:600px) {
+    .title {
+        font-weight: 600;
+    }
+
+    .switcher-btn {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:480px) {
+    .title {
+        font-size: 17px;
+    }
+
+    .switcher-btn {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .country-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:375px) {
+    .title {
+        font-size: 15px;
+    }
+
+    .switcher-btn {
+        font-size: 7px;
+    }
+}
