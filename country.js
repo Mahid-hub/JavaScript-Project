@@ -2,6 +2,7 @@ const countryName = new URLSearchParams(location.search).get('name');
 const countryDetails = document.querySelector('.country-details');
 const darkMode = document.querySelector('.switcher-btn');
 const body = document.querySelector('body');
+const back = document.querySelector(".back-btn");
 
 if (countryName) {
     fetch(`https://restcountries.com/v3.1/name/${encodeURIComponent(countryName)}?fullText=true`)
@@ -42,6 +43,6 @@ if (countryName) {
 // </div>
 
 darkMode.addEventListener('click', () => {
-        body.classList.toggle('dark-mode')
+        body.classList.toggle('dark-mode');
     })
 

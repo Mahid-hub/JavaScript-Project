@@ -1,6 +1,7 @@
 const countryList = document.querySelector('.country-list');
 const darkMode = document.querySelector('.switcher-btn');
 const body = document.querySelector('body');
+const searchInput = document.querySelector('.search-input');
 
 fetch('https://restcountries.com/v3.1/all?fields=name,capital,region,population,flags')
     .then(res => res.json())
@@ -23,7 +24,22 @@ fetch('https://restcountries.com/v3.1/all?fields=name,capital,region,population,
     })
 
 
-    darkMode.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-    })
+darkMode.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+})
 
+searchInput.addEventListener('input', (e) => {
+    const search = e.target.value.toLowerCase();
+    const countryCards = document.querySelectorAll('.card');
+
+    countryCards.forEach((card) => {
+        const name = card.querySelector('.card-title').innerText.toLowerCase();
+
+        if (name.includes(search)) {
+            card.style.display = 'block';
+            // console.log(name);
+        } else {
+            card.style.display = 'none';
+        }
+    })
+});
